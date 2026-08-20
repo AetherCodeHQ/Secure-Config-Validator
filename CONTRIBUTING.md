@@ -6,7 +6,7 @@ Thank you for your interest in contributing! 🎉
 
 ### 1. Fork the Repository
 ```bash
-git clone https://github.com/Qyroxen/Secure-Config-Validator.git
+git clone https://github.com/AetherCodeHQ/Secure-Config-Validator.git
 cd Secure-Config-Validator
 ```
 
