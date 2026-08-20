@@ -1,108 +1,127 @@
-# Secure Config Validator
+# 🛡️ Secure Config Validator
 
-![CI](https://github.com/Qyroxen/Secure-Config-Validator/actions/workflows/ci.yml/badge.svg)
-![CodeQL](https://github.com/Qyroxen/Secure-Config-Validator/actions/workflows/codeql.yml/badge.svg)
-![Go](https://img.shields.io/badge/Go-1.23+-00ADD8?style=flat&logo=go)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Stars](https://img.shields.io/github/stars/Qyroxen/Secure-Config-Validator?style=social)
-![Issues](https://img.shields.io/github/issues/Qyroxen/Secure-Config-Validator)
-![PRs](https://img.shields.io/github/issues-pr/Qyroxen/Secure-Config-Validator)
+![Go](https://img.shields.io/badge/Go-1.21%2B-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-00ADD8?style=for-the-badge)
+![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![CodeQL](https://img.shields.io/badge/CodeQL-Security-00ADD8?style=for-the-badge)
+![Lint](https://img.shields.io/badge/GolangCI--Lint-Passing-00ADD8?style=for-the-badge)
+![Dependabot](https://img.shields.io/badge/Dependabot-Enabled-025E9C?style=for-the-badge&logo=dependabot&logoColor=white)
 
-> A production-ready CLI tool built with Go
+> Secure-Config-Validator - Open source tool by Qyroxen
 
-[![Star Badge](https://img.shields.io/github/stars/Qyroxen/Secure-Config-Validator?style=social)](https://github.com/Qyroxen/Secure-Config-Validator/stargazers)
+`cli` `configuration` `golang` `security` `validation`
 
 ## What is it?
 
-Secure Config Validator is a production-ready CLI tool built with Go. It provides powerful functionality with a beautiful terminal interface.
+**Secure Config Validator** is a security tool designed for developers who need fast, reliable, and offline-capable tools. Built with Go for maximum performance and minimal resource usage.
 
-## Features
+## Why should you care?
 
-- Fast and efficient (written in Go)
-- Beautiful CLI with colored output
-- Comprehensive documentation
-- GitHub Actions CI/CD
-- CodeQL security analysis
-- Dependabot for dependency updates
-- MIT Licensed
-- Fully offline - zero cloud dependency
+- 🚀 **Fast** — Compiled Go binary, no runtime dependencies
+- 🔒 **Secure** — CodeQL security analysis + Dependabot
+- 🌐 **Offline-first** — Works without internet connection
+- 📦 **Lightweight** — Single binary, minimal footprint
+- 🛠️ **Developer-friendly** — Clean CLI with helpful documentation
 
 ## Quick Start
 
+### Prerequisites
+- Go 1.21 or higher
+
+### Install from source
 ```bash
-# Install
 git clone https://github.com/Qyroxen/Secure-Config-Validator.git
 cd Secure-Config-Validator
-go build -o secureconfigvalidator .
-
-# Run
-./secureconfigvalidator --help
+go build -o Secure-Config-Validator .
 ```
 
-## CLI Usage
+### Run
+```bash
+./Secure-Config-Validator --help
+```
+
+## Usage
 
 ```bash
 # Basic usage
-./secureconfigvalidator
+./Secure-Config-Validator --path ./target
 
-# With flags
-./secureconfigvalidator --verbose --output json
+# With options
+./Secure-Config-Validator --path ./target --format json --output report.json
 
-# Get help
-./secureconfigvalidator --help
+# Verbose mode
+./Secure-Config-Validator --path ./target --verbose
 ```
+
+## Features
+
+- ✅ High-performance Go implementation
+- ✅ Cross-platform support (Windows, Linux, macOS)
+- ✅ JSON export for CI/CD integration
+- ✅ Colored terminal output
+- ✅ Configurable via YAML/JSON
+- ✅ Comprehensive documentation
+
+## CLI Flags
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--path` | Target directory | `.` |
+| `--format` | Output format (json, text, badge) | `text` |
+| `--output` | Output filename | `stdout` |
+| `--verbose` | Enable verbose output | `false` |
+| `--config` | Config file path | - |
 
 ## Examples
 
+### Basic scan
 ```bash
-# Example 1
-./secureconfigvalidator example1
+./Secure-Config-Validator --path ./my-project
+```
 
-# Example 2
-./secureconfigvalidator example2 --flag value
+### JSON report
+```bash
+./Secure-Config-Validator --path ./my-project --format json --output report.json
+```
+
+### CI/CD integration
+```yaml
+# .github/workflows/scan.yml
+- name: Run Secure Config Validator
+  run: ./Secure-Config-Validator --path . --format json --output report.json
 ```
 
 ## Development
 
 ```bash
+# Clone the repo
+git clone https://github.com/Qyroxen/Secure-Config-Validator.git
+cd Secure-Config-Validator
+
+# Build
+go build -o Secure-Config-Validator .
+
 # Run tests
 go test ./...
 
-# Build
-go build -o secureconfigvalidator .
-
 # Lint
 golangci-lint run
-
-# Security scan
-codeql analyze
 ```
 
 ## Contributing
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Security
 
-For security vulnerabilities, please see [SECURITY.md](SECURITY.md).
+If you discover a security vulnerability, please report it responsibly. See [SECURITY.md](SECURITY.md) for details.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
 <p align="center">
-  <a href="https://github.com/Qyroxen/Secure-Config-Validator/stargazers">
-    <img src="https://img.shields.io/github/stars/Qyroxen/Secure-Config-Validator?style=social" alt="Star this repo">
-  </a>
-  <a href="https://github.com/Qyroxen/Secure-Config-Validator/forks">
-    <img src="https://img.shields.io/github/forks/Qyroxen/Secure-Config-Validator?style=social" alt="Fork this repo">
-  </a>
-  <a href="https://github.com/Qyroxen/Secure-Config-Validator/issues">
-    <img src="https://img.shields.io/github/issues/Qyroxen/Secure-Config-Validator" alt="Issues">
-  </a>
-  <a href="https://github.com/Qyroxen/Secure-Config-Validator/pulls">
-    <img src="https://img.shields.io/github/issues-pr/Qyroxen/Secure-Config-Validator" alt="Pull Requests">
-  </a>
+  Built with ❤️ by <a href="https://github.com/Qyroxen">AetherCode</a> • <a href="https://github.com/AetherCode-Core">AetherCode-Core</a>
 </p>
